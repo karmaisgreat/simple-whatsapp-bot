@@ -25,18 +25,19 @@
 ## Heroku CLI
 
 1. After downloading and installing Heroku CLI in your system login to heroku cli using `heroku login` in command prompt or powershell.
-2. Now download or clone the `simple-whatsapp-bot` repo from (https://github.com/karmaisgreat/simple-whatsapp-bot) 
-3. Now enter in `simple-whatsapp-bot` directory using `cd simple-whatsapp-bot` in command prompt or terminal.
-4. Now init the git using `git init`
-5. Create the remote region using `heroku git:remote -a <your-app-name>`
-6. Now deploy the repo in your heroku app using :
+2. Add ffmpeg (*for sticker support*) in your heroku app using `heroku buildpacks:add https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git -a <your-app-name>`
+3. After adding ffmpeg now add 'Heroku Buildpack for Node.js' using  `heroku buildpacks:add https://github.com/heroku/heroku-buildpack-nodejs.git -a <your-app-name>`
+4. Now download or clone the `simple-whatsapp-bot` repo from (https://github.com/karmaisgreat/simple-whatsapp-bot) 
+5. Now enter in `simple-whatsapp-bot` directory using `cd simple-whatsapp-bot` in command prompt or terminal.
+6. Now init the git using `git init`
+7. Create the remote region using `heroku git:remote -a <your-app-name>`
+8. Now deploy the repo in your heroku app using :
    - `git add .`
    - `git commit -am "first commit"`
    - `git push heroku master`
-7. Now add ffmpeg in your heroku app using `heroku buildpacks:add --index 1 https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git`
-8. Now after the deploy process is completed use `heroku logs -a <your-app-name> --tail` to get real time logs from heroku app.
-9. In real time logs it will automatically ask you for login using qr code just simple scan the qr code using your whatsapp web section, and you are done.
-10. Scan QR code with you phone. done!
+9. Now after the deploy process is completed use `heroku logs -a <your-app-name> --tail` to get real time logs from heroku app.
+10. In real time logs it will automatically ask you for login using qr code just simple scan the qr code using your whatsapp web section, and you are done.
+11. Scan QR code with you phone. done!
 
 
 # Features:-
